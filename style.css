@@ -93,21 +93,7 @@ flex-direction: column;
   background-color: var(--secondary);
 }
 
-.badge {
-   width: 160px;
-  height: 40px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-   border-radius: 20px;
-
-  /* Tailwind-like: primary/50 */
-  background-color: rgb(var(--primary-rgb) / 0.5);
-
-  color: var(--primary-foreground);
-  font-weight: 300;
-}
+ 
 
 body, html {
     margin: 0;
