@@ -1,4 +1,5 @@
-# herbalCukraszda.github.io
+# Weboldal link: https://goshawk1337.github.io/herbalCukraszda.github.io/
+### Minden commit és push után, egy kicsit várni kell hogy frissüljön.
 
 
 #  Todo
