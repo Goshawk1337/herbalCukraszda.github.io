@@ -1,7 +1,358 @@
-.pageLayout { 
+:root {
+  /* HEX versions (keep if you also want solid usage via var(--color)) */
+  --background: #e8d9d5;
+  --foreground: #3f3b39;
+  --card: #ffffff;
+  --card-foreground: #3f3b39;
+  --popover: #ffffff;
+  --popover-foreground: #3f3b39;
+  --primary: #a94833;
+  --primary-foreground: #fdfaf9;
+  --secondary: #f5ebe4;
+  --secondary-foreground: #5a5450;
+  --muted: #f6f0ee;
+  --muted-foreground: #7d7875;
+  --accent: #bc8e56;
+  --accent-foreground: #3f3b39;
+  --destructive: #eb3126;
+  --destructive-foreground: #eb3126;
+  --border: #e4dcd9;
+  --input: #efe8e5;
+  --ring: #a94833;
+  --chart-1: #e25330;
+  --chart-2: #219b9d;
+  --chart-3: #2d4f82;
+  --chart-4: #e2c244;
+  --chart-5: #d79f42;
+  --sidebar: #fcfcfc;
+  --sidebar-foreground: #242424;
+  --sidebar-primary: #333333;
+  --sidebar-primary-foreground: #fcfcfc;
+  --sidebar-accent: #f7f7f7;
+  --sidebar-accent-foreground: #333333;
+  --sidebar-border: #ebebeb;
+  --sidebar-ring: #b4b4b4;
+
+  /* RGB channel versions (Tailwind-like opacity control) */
+  --background-rgb: 253 250 249;
+  --foreground-rgb: 63 59 57;
+  --card-rgb: 255 255 255;
+  --card-foreground-rgb: 63 59 57;
+  --popover-rgb: 255 255 255;
+  --popover-foreground-rgb: 63 59 57;
+  --primary-rgb: 169 72 51;
+  --primary-foreground-rgb: 253 250 249;
+  --secondary-rgb: 245 235 228;
+  --secondary-foreground-rgb: 90 84 80;
+  --muted-rgb: 246 240 238;
+  --muted-foreground-rgb: 125 120 117;
+  --accent-rgb: 188 142 86;
+  --accent-foreground-rgb: 63 59 57;
+  --destructive-rgb: 235 49 38;
+  --destructive-foreground-rgb: 235 49 38;
+  --border-rgb: 228 220 217;
+  --input-rgb: 239 232 229;
+  --ring-rgb: 169 72 51;
+  --chart-1-rgb: 226 83 48;
+  --chart-2-rgb: 33 155 157;
+  --chart-3-rgb: 45 79 130;
+  --chart-4-rgb: 226 194 68;
+  --chart-5-rgb: 215 159 66;
+  --sidebar-rgb: 252 252 252;
+  --sidebar-foreground-rgb: 36 36 36;
+  --sidebar-primary-rgb: 51 51 51;
+  --sidebar-primary-foreground-rgb: 252 252 252;
+  --sidebar-accent-rgb: 247 247 247;
+  --sidebar-accent-foreground-rgb: 51 51 51;
+  --sidebar-border-rgb: 235 235 235;
+  --sidebar-ring-rgb: 180 180 180;
+
+  --radius: 0.75rem;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  color: var(--foreground);
+  background-color: var(--background);
+}
+
+.pageLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero {
+  padding: 20px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+flex-direction: column;
+  background-color: var(--secondary);
+}
+
+.badge {
+   width: 160px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+   border-radius: 20px;
+
+  /* Tailwind-like: primary/50 */
+  background-color: rgb(var(--primary-rgb) / 0.5);
+
+  color: var(--primary-foreground);
+  font-weight: 300;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
     width: 100%;
-    min-height: 100vh;
+    /* Use the variable here instead of the hardcoded hex */
+     color: var(--foreground); /* Recommended: also set standard text color */
+}
+
+.pageLayout { 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+.hero {
+    padding: 20px;
+    margin-left: 100px;
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: left;
+    height: 400px;
+    background-color: var(--background);
+}
+
+.badge {
+     width: 160px;
+    height: 40px; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: var(--secondary);
+    color: var(--muted-foreground);
+    font-weight: 300;
+}
+.heroMain {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--foreground);
+}
+
+.heroAlt {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--muted-foreground);
+}
+
+.heroButton {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border: none;
+}
+
+.heroProds {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.heroProds:hover {
+    background-color: var(--accent);
+    color: var(--primary-foreground);
+     transition: all 300ms;
+}
+
+.heroContact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    font-weight: lighter;
+    font-size: 14px;
+    background-color: var(--secondary);
+    border: 0.5px solid var(--popover-foreground);
+    color: black;
+}
+
+.heroContact:hover {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    border: 0.5px solid var(--primary);
+    transition: all 300ms;
+}
+
+hr {
+    margin-top: 20px;
+    width: 42%;
+    border: 0.5px solid var(--secondary-foreground);
+    margin: 10px 0;
+}
+
+.heroStats {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(160px, 1fr));
+  gap: 14px;
+  width: min(720px, 100%);
+}
+
+.statCard {
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgb(var(--border-rgb) / 0.8);
+  background: rgb(var(--card-rgb) / 0.55); /* "card/55" */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.statCard h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+}
+
+.statCard p {
+  margin: 6px 0 0;
+  font-size: 0.95rem;
+  color: var(--muted-foreground);
+}
+
+ 
+.heroGrid {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.heroLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Right decorative circle block */
+.heroRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circleWrap {
+  position: relative;
+  width: min(420px, 90vw);
+  aspect-ratio: 1 / 1;
+}
+
+/* Circles */
+.circle {
+  position: absolute;
+  border-radius: 9999px;
+  inset: 0;
+}
+
+.circle--outer {
+  /* like bg-primary/10 + rotate */
+  background: rgb(var(--primary-rgb) / 0.10);
+  transform: rotate(-6deg);
+}
+
+.circle--middle {
+  /* like inset-4 bg-secondary rotate */
+  inset: 16px;
+  background: var(--secondary);
+  transform: rotate(3deg);
+}
+
+.circle--inner {
+  /* like inset-8 bg-card */
+  inset: 32px;
+  background: var(--card);
+  display: grid;
+  place-items: center;
+}
+
+.shadowCard {
+  box-shadow:
+    0 10px 30px rgb(0 0 0 / 0.12),
+    0 2px 10px rgb(0 0 0 / 0.08);
+}
+
+.circleContent {
+  text-align: center;
+  padding: 32px;
+}
+
+.heroIcon {
+  width: 64px;
+  height: 64px;
+  color: var(--primary);
+  margin: 0 auto 14px;
+}
+
+.circleTitle {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--foreground);
+}
+
+.circleSubtitle {
+  margin: 6px 0 0;
+  color: var(--muted-foreground);
+}
+
+.circleAwards {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.awardIcon {
+  width: 20px;
+  height: 20px;
+  color: var(--accent);
+  /* Lucide icons are strokes; "fill" isn't a thing by default.
+     If you want filled awards, switch to inline SVGs or another icon set. */
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 900px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+  }
+  .heroRight {
+    order: 2;
+  }
+  .heroLeft {
+    order: 1;
+  }
+}
+/* ...existing code... */

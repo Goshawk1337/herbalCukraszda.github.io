@@ -1,17 +1,97 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Herbál Cukrászda</title>
     <script src="components/navbar/navbarDefine.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
 </head>
+
 <body>
     <div class="pageLayout">
-        <div>
-            <navbar-component></navbar-component>
+        <navbar-component></navbar-component>
+        <!-- ...existing code... -->
+<div class="hero">
+  <div class="heroGrid">
+    <div class="heroLeft">
+      <div class="badge">
+        <i data-lucide="heart"></i>
+        <span>Friss sütemények</span>
+      </div>
+
+      <div class="heroText">
+        <h1 class="heroMain">
+          Üdvözöljük a <span style="color: var(--primary);">Herbál <br> Cukrászdában</span>
+        </h1>
+        <p class="heroAlt">
+          Több mint 20 éve készítjük kézműves tortáinkat és süteményeinket a legjobb <br>
+          alapanyagokból. Nálunk minden falat igazi élmény.
+        </p>
+      </div>
+
+      <div class="heroButton">
+        <button class="heroProds">Termékeink</button>
+        <button class="heroContact">Kapcsolat</button>
+      </div>
+
+      <hr>
+
+      <div class="heroStats">
+        <div class="statCard">
+          <h2>20+</h2>
+          <p>Év tapasztalat</p>
         </div>
+
+        <div class="statCard">
+          <h2>50+</h2>
+          <p>Sütemény féle</p>
+        </div>
+
+        <div class="statCard">
+          <h2>1000+</h2>
+          <p>Elégedett vendég</p>
+        </div>
+      </div>
     </div>
+
+    <!-- Right side decorative circles (converted from React/Tailwind) -->
+    <div class="heroRight" aria-hidden="true">
+      <div class="circleWrap">
+        <div class="circle circle--outer"></div>
+        <div class="circle circle--middle"></div>
+
+        <div class="circle circle--inner shadowCard">
+          <div class="circleContent">
+            <i class="heroIcon" data-lucide="chef-hat"></i>
+
+            <p class="circleTitle">Kézműves</p>
+            <p class="circleSubtitle">Minőség</p>
+
+            <div class="circleAwards">
+              <i class="awardIcon" data-lucide="award"></i>
+              <i class="awardIcon" data-lucide="award"></i>
+              <i class="awardIcon" data-lucide="award"></i>
+              <i class="awardIcon" data-lucide="award"></i>
+              <i class="awardIcon" data-lucide="award"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ...existing code... -->
+
+
+
+
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
+
 </html>
