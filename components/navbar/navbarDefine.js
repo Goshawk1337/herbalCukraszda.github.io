@@ -91,7 +91,7 @@ class Header extends HTMLElement {
             <h1>Herbál Cukrászda</h1>
           </div>
           <ul>
-          <li><a href="about.html"><i data-lucide="info"></i>Főoldal</a></li>
+          <li><a href="about.html"><i data-lucide="info"></i>Főoldals</a></li>
             <li><a href="about.html"><i data-lucide="info"></i>Rólunk</a></li>
             <li><a href="work.html"><i data-lucide="briefcase"></i>Termékek</a></li>
             <li><a href="contact.html"><i data-lucide="mail"></i>Elérhetőség</a></li>
