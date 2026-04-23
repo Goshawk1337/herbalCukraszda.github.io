@@ -3,8 +3,9 @@ h2 {text-align: center;
     color:#a94833 ;}  
 h3 {text-align: center;} 
 
+h4{text-align: center;}
+
 .statsGrid {
-  
   margin-top: 18px;
   display: grid;
   grid-template-columns: repeat(4, minmax(160px, 1fr));
@@ -12,7 +13,6 @@ h3 {text-align: center;}
   width: min(970px, 100%);}
 
 .statCard {
-
   padding: 14px 16px;
   border-radius: 16px;
   border: 1px solid rgb(var(--border-rgb) / 0.8);
@@ -26,17 +26,26 @@ h3 {text-align: center;}
     align-items: center;
     text-align: center;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
     border: none;
     font-weight: lighter;
     font-size: 14px;
 }
 
+
+
 .awardIcon {
-  width: 20px;
+  
+  border-radius: 70%;
+  background-color: rgb(207, 196, 196);
+  
   height: 20px;
   color: var(--accent);
  }
+
+ .bg{
+ }
+
 
 
 
