@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbál cukrászda - Elérhetőség</title>
+    <link rel="stylesheet" href="elerhetosegek.css">
+    <link rel="stylesheet" href="../../style.css">
+    <script type="module" src="../../components/navbar/navbarDefine.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+    <div class="pageLayout">
+        <navbar-component></navbar-component>
+        <div class="header-content">
+            <p class="header-above">Kapcsolat</p>
+            <h1 class="header-title">Elérhetőségeink</h1>
+            <p class="header-description">Látogasson el hozzánk, vagy vegye fel velünk a kapcsolatot egyedi
+                rendelésekkel kapcsolatban!</p>
+        </div>
+        <div class="infoholder">
+            <div class="infogrids">
+                <div class="infogrid">
+                    <div class="infolayout">
+                        <div class="infocard">
+                            <div class="iconbg"><i class="iconset" data-lucide="map-pin"></i></div>
+                            <div class="infotext">
+                                <p class="infoAlt">Cím</p>
+                                <p class="infoMain">1234 Budapest, Sütemény utca 12.</p>
+                            </div>
+                        </div>
+                        <div class="infocard">
+                            <div class="iconbg"><i class="iconset" data-lucide="map-pin"></i></div>
+                            <div class="infotext">
+                                <p class="infoAlt">Telefonszám</p>
+                                <p class="infoMain">+36 1 234 5678</p>
+                            </div>
+                        </div>
+                        <div class="infocard">
+                            <div class="iconbg"><i class="iconset" data-lucide="map-pin"></i></div>
+                            <div class="infotext">
+                                <p class="infoAlt">E-mail</p>
+                                <p class="infoMain">info@herbalcukraszda.hu</p>
+                            </div>
+                        </div>
+                        <div class="opening">
+                            <div class="opentext">
+                                <div class="iconbg"><i class="iconset" data-lucide="clock"></i></div>
+                                <h1>Nyitvatartás</h1>
+                            </div>
+                            <div>
+                                <p class="date">Hétfő - Péntek: 08:00 - 18:00</p>
+                                <p class="date">Szombat: 09:00 - 14:00</p>
+                                <p class="date">Vasárnap: Zárva</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="contactgrid">
+                    <h1>Írjon nekünk</h1>
+                    <div class="contactform">
+                        <div class="rowgroup">
+                            <div class="inputgroup">
+                                <label for="name">Név:</label>
+                                <input class="inputc" type="text" id="name" name="name" required>
+                            </div >
+                            <div class="inputgroup">
+                                <label for="phone">Telefonszám:</label>
+                                <input class="inputc" type="phone" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="inputgroup">
+                            <label for="email">Email:</label>
+                            <input class="inputc" type="email" id="email" name="email" required>
+
+                        </div>
+                        <div class="inputgroup">
+                            <label for="message">Üzenet:</label>
+                            <input class="inputcc" id="message" name="message" rows="4" required></input>
+                        </div>
+
+                        <button class="sendbutton">Üzenet küldése</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
