@@ -1,18 +1,31 @@
 h1 {text-align: center;}
-h2 {text-align: center;
+h2 {
+  margin-top: 30px;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
     color:#a94833 ;}  
-h3 {text-align: center;} 
+h3 {text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+} 
 
-h4{text-align: center;}
+ 
 
 .statsGrid {
   margin-top: 18px;
   display: grid;
   grid-template-columns: repeat(4, minmax(160px, 1fr));
   gap: 30px;
-  width: min(970px, 100%);}
+  width: min(1300px, 100%);}
 
 .statCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  height: 200px;
   padding: 14px 16px;
   border-radius: 16px;
   border: 1px solid rgb(var(--border-rgb) / 0.8);
@@ -21,11 +34,21 @@ h4{text-align: center;}
   -webkit-backdrop-filter: blur(6px);
 }
 
+.stattitle {
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+ }
+
+ .statdesc {
+  font-weight: 300;
+  font-size: 14px;
+ }
+
 .center{
     display: flex;
     align-items: center;
-    text-align: center;
-    justify-content: center;
+     justify-content: center;
     gap: 12px;
     border: none;
     font-weight: lighter;
@@ -33,19 +56,73 @@ h4{text-align: center;}
 }
 
 
-
+ 
 .awardIcon {
-  
-  border-radius: 70%;
-  background-color: rgb(207, 196, 196);
-  
-  height: 20px;
-  color: var(--accent);
+  width: 25px;
+  height: 25px;
+  color: var(--primary);
  }
 
  .bg{
+display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: color-mix(in srgb, var(--primary-color) 10%, transparent);
  }
 
 
 
 
+.relative {
+  position: relative;
+}
+
+/* The quote card */
+blockquote.relative {
+  width: min(900px, 92%);
+  margin: 48px auto;
+  padding: 28px 26px 22px;
+  background: rgb(var(--card-rgb) / 0.6);
+  border: 1px solid rgb(var(--border-rgb) / 0.9);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* The big “ quote mark */
+.absolute-quote {
+  position: absolute;
+  top: -16px;                 /* -top-4 */
+  left: 50%;                  /* left-1/2 */
+  transform: translateX(-50%); /* -translate-x-1/2 */
+  font-size: 64px;            /* text-6xl */
+  line-height: 1;
+  font-family: ui-serif, Georgia, "Times New Roman", Times, serif; /* font-serif */
+  color: rgb(var(--primary-rgb) / 0.2); /* text-primary/20 */
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Quote text */
+.quote-text {
+  position: relative;
+  z-index: 1; /* z-10 */
+  margin: 0;
+  padding-top: 32px; /* pt-8 */
+  font-family: ui-serif, Georgia, "Times New Roman", Times, serif; /* font-serif */
+  font-size: 20px; /* text-xl */
+  font-style: italic;
+  line-height: 1.7; /* leading-relaxed */
+  color: rgb(var(--foreground-rgb) / 0.8); /* text-foreground/80 */
+}
+
+/* Footer */
+.quote-footer {
+  margin-top: 16px; /* mt-4 */
+  font-size: 14px;  /* text-sm */
+  color: var(--muted-foreground);
+}
